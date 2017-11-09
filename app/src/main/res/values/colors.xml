@@ -1,0 +1,18 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <color name="colorPrimary">#1D70A2</color>
+    <color name="colorPrimaryDark">#29335C</color>
+    <color name="colorAccent">#A53860</color>
+    <color name="white">#FFFFFF</color>
+    <color name="transparent">#0000</color>
+    <color name="green">#1DA16C</color>
+    <!--<color name="red">#bd3131</color>-->
+    <color name="light_gray">#ADADAD</color>
+    <color name="dark_gray">#4d4d4d</color>
+    <color name="dividerLine">#4D000000</color>
+    <color name="yellow">#fbc93d</color>
+    <color name="blue">#6cc0e5</color>
+    <color name="red">#fb4f4f</color>
+    <color name="default_gray">@android:color/tab_indicator_text</color>
+    <color name="default_gray_background">#EEEEEE</color>
+</resources>

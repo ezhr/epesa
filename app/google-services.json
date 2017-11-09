@@ -1,0 +1,42 @@
+{
+  "project_info": {
+    "project_number": "796295644114",
+    "firebase_url": "https://ezhr-epesa.firebaseio.com",
+    "project_id": "ezhr-epesa",
+    "storage_bucket": "ezhr-epesa.appspot.com"
+  },
+  "client": [
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:796295644114:android:bcc89c5c063f94c2",
+        "android_client_info": {
+          "package_name": "ezhr.epesa"
+        }
+      },
+      "oauth_client": [
+        {
+          "client_id": "796295644114-sh2s3r6hgcu5aee4leovqfsbscsphdav.apps.googleusercontent.com",
+          "client_type": 3
+        }
+      ],
+      "api_key": [
+        {
+          "current_key": "AIzaSyB5gam_pPjtpp1WwXbWhq8ROPM-UYc3Pq4"
+        }
+      ],
+      "services": {
+        "analytics_service": {
+          "status": 1
+        },
+        "appinvite_service": {
+          "status": 1,
+          "other_platform_oauth_client": []
+        },
+        "ads_service": {
+          "status": 2
+        }
+      }
+    }
+  ],
+  "configuration_version": "1"
+}

@@ -1,0 +1,121 @@
+<FrameLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    tools:context="ezhr.epesa.RegisterPasscodeFragment">
+
+    <android.support.v7.widget.CardView
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        app:contentPadding="8dp">
+
+        <ScrollView
+            android:layout_width="match_parent"
+            android:layout_height="match_parent">
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="vertical"
+                >
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:fontFamily="sans-serif-light"
+                    android:text="settings"
+                    android:textColor="@color/blue"
+                    android:textSize="28sp"/>
+
+                <Space
+                    android:layout_width="wrap_content"
+                    android:layout_height="8dp"/>
+
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:fontFamily="sans-serif-light"
+                    android:textSize="14sp"
+                    android:text="I'd like to receive a notification for every transaction I make via:"
+                    android:layout_gravity="center_vertical"
+                    />
+
+                <Space
+                    android:layout_width="wrap_content"
+                    android:layout_height="8dp"/>
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:orientation="horizontal">
+
+                    <TextView
+                        android:layout_width="0dp"
+                        android:layout_weight="1"
+                        android:layout_height="wrap_content"
+                        android:fontFamily="sans-serif-light"
+                        android:textSize="14sp"
+                        android:text="email (coming soon!)"
+                        android:layout_gravity="center_vertical"
+                        />
+
+                    <Space
+                        android:layout_width="8dp"
+                        android:layout_height="wrap_content"/>
+
+                    <Switch
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_gravity="center_vertical"
+                        android:checked="false"
+                        android:enabled="false"
+                        />
+
+                </LinearLayout>
+
+                <Space
+                    android:layout_width="wrap_content"
+                    android:layout_height="8dp"/>
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:orientation="horizontal">
+
+                    <TextView
+                        android:layout_width="0dp"
+                        android:layout_weight="1"
+                        android:layout_height="wrap_content"
+                        android:fontFamily="sans-serif-light"
+                        android:textSize="14sp"
+                        android:text="SMS (coming soon!)"
+                        android:layout_gravity="center_vertical"
+                        />
+
+                    <Space
+                        android:layout_width="8dp"
+                        android:layout_height="wrap_content"/>
+
+                    <Switch
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_gravity="center_vertical"
+                        android:checked="false"
+                        android:enabled="false"
+                        />
+
+                </LinearLayout>
+
+
+
+            </LinearLayout>
+
+        </ScrollView>
+
+    </android.support.v7.widget.CardView>
+
+</FrameLayout>
+

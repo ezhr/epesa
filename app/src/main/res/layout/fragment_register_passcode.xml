@@ -1,0 +1,79 @@
+<FrameLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    tools:context="ezhr.epesa.RegisterPasscodeFragment">
+
+    <android.support.v7.widget.CardView
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        app:contentPadding="8dp">
+
+        <ScrollView
+            android:layout_width="match_parent"
+            android:layout_height="match_parent">
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="vertical"
+                >
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:fontFamily="sans-serif-light"
+                    android:text="passcode"
+                    android:textColor="@color/blue"
+                    android:textSize="28sp"/>
+
+                <Space
+                    android:layout_width="wrap_content"
+                    android:layout_height="8dp"/>
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:fontFamily="sans-serif-light"
+                    android:text="Your epesa passcode will give you access to your epesa wallet (keep it safe and secure!)
+                    \nCreate a new passcode below - the longer the better!  We recommend a passcode that's at least 6 digits long."
+                    android:textSize="14sp"/>
+
+                <Space
+                    android:layout_width="wrap_content"
+                    android:layout_height="8dp"/>
+
+                <com.rengwuxian.materialedittext.MaterialEditText
+                    android:id="@+id/registerPasscodeEditText1"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_margin="8dp"
+                    android:hint="tap to enter a new passcode"
+                    android:inputType="numberPassword"
+                    android:textSize="14sp"
+                    app:met_minCharacters="4"
+                    android:maxLength="8"
+                    />
+
+                <com.rengwuxian.materialedittext.MaterialEditText
+                    android:id="@+id/registerPasscodeEditText2"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_margin="8dp"
+                    android:hint="tap to confirm your passcode"
+                    android:inputType="numberPassword"
+                    android:textSize="14sp"
+                    app:met_minCharacters="4"
+                    android:maxLength="8"
+                    />
+
+            </LinearLayout>
+
+        </ScrollView>
+
+    </android.support.v7.widget.CardView>
+
+</FrameLayout>
+

@@ -1,0 +1,21 @@
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+             android:layout_width="match_parent"
+             android:layout_height="wrap_content"
+              android:orientation="vertical"
+             xmlns:app="http://schemas.android.com/apk/res-auto">
+
+    <ezhr.epesa.PasscodeView
+        android:id="@+id/passcodeView"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_gravity="center_horizontal"
+        android:layout_margin="16dp"
+        app:digitRadius="4dp"
+        app:digitInnerRadius="4dp"
+        app:controlColor="@color/dark_gray"
+        app:digitColorFilled="@color/dark_gray"
+        app:digitColorBorder="@color/dark_gray"
+        />
+
+
+</LinearLayout>

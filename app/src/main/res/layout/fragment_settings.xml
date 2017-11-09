@@ -1,0 +1,176 @@
+<LinearLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/colorPrimary"
+    android:orientation="vertical"
+    tools:context="ezhr.epesa.SettingsFragment">
+
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginLeft="16dp"
+        android:layout_marginRight="16dp"
+        android:layout_marginTop="16dp"
+        android:fontFamily="sans-serif-light"
+        android:text="notification settings:"
+        android:textColor="@color/white"
+        android:textSize="24sp"/>
+
+    <Space
+        android:layout_width="wrap_content"
+        android:layout_height="16dp"/>
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginLeft="24dp"
+        android:layout_marginRight="24dp"
+        android:orientation="horizontal">
+
+        <TextView
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_gravity="center_vertical"
+            android:layout_weight="1"
+            android:fontFamily="sans-serif-light"
+            android:text="Send me an email notification for every transaction"
+            android:textColor="@color/white"
+            />
+
+        <Space
+            android:layout_width="4dp"
+            android:layout_height="wrap_content"/>
+
+        <Switch
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_gravity="center_vertical"
+            android:checked="false"
+            android:enabled="false"
+            />
+
+    </LinearLayout>
+
+    <Space
+        android:layout_width="wrap_content"
+        android:layout_height="8dp"/>
+
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginLeft="24dp"
+        android:layout_marginRight="24dp"
+        android:orientation="horizontal">
+
+        <TextView
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_gravity="center_vertical"
+            android:layout_weight="1"
+            android:fontFamily="sans-serif-light"
+            android:text="Send me an SMS notification for every transaction"
+            android:textColor="@color/white"
+            />
+
+        <Space
+            android:layout_width="4dp"
+            android:layout_height="wrap_content"/>
+
+        <Switch
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_gravity="center_vertical"
+            android:checked="false"
+            android:enabled="false"
+            />
+
+    </LinearLayout>
+
+    <Space
+        android:layout_width="wrap_content"
+        android:layout_height="8dp"/>
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginLeft="24dp"
+        android:layout_marginRight="24dp"
+        android:orientation="horizontal">
+
+        <TextView
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_gravity="center_vertical"
+            android:layout_weight="1"
+            android:fontFamily="sans-serif-light"
+            android:text="Send me a statement via email at the end of every month detailing my transactions"
+            android:textColor="@color/white"
+            />
+
+        <Space
+            android:layout_width="4dp"
+            android:layout_height="wrap_content"/>
+
+        <Switch
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_gravity="center_vertical"
+            android:checked="false"
+            android:enabled="false"
+            />
+
+    </LinearLayout>
+
+
+    <Space
+        android:layout_width="wrap_content"
+        android:layout_height="24dp"/>
+
+    <mehdi.sakout.fancybuttons.FancyButton
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginLeft="20dp"
+        android:layout_marginRight="20dp"
+        android:clickable="true"
+        android:enabled="true"
+        android:hapticFeedbackEnabled="true"
+        android:padding="12dp"
+        app:fb_defaultColor="@color/green"
+        app:fb_focusColor="@color/white"
+        app:fb_text="SAVE MY QR CODE TO GALLERY"
+        app:fb_textSize="16sp"
+
+
+        />
+
+
+    <Space
+        android:layout_width="wrap_content"
+        android:layout_height="24dp"/>
+
+    <Space
+        android:layout_width="wrap_content"
+        android:layout_height="0dp"
+        android:layout_weight="1"/>
+
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_gravity="center"
+        android:fontFamily="sans-serif-light"
+        android:gravity="center"
+        android:text="Made with ❤ by EzhR"
+        android:textColor="@color/white"
+        android:textSize="12sp"
+        />
+
+    <Space
+        android:layout_width="wrap_content"
+        android:layout_height="4dp"/>
+
+
+</LinearLayout>

@@ -1,0 +1,153 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:fancy="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/activitysigninup"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:layout_marginBottom="32dp"
+    android:layout_marginTop="32dp"
+    android:layout_marginLeft="16dp"
+    android:layout_marginRight="16dp"
+    android:orientation="vertical"
+    tools:context="ezhr.epesa.SigninupActivity">
+
+    <TextView
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:fontFamily="sans-serif-thin"
+        android:gravity="center"
+        android:text="Welcome to epesa"
+        android:textColor="@color/blue"
+        android:textSize="32sp"
+        />
+
+    <Space
+        android:layout_width="wrap_content"
+        android:layout_height="64dp"/>
+
+
+    <TextView
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:fontFamily="sans-serif-thin"
+        android:gravity="center"
+        android:text="Please sign in or register below:"
+        android:textSize="24sp"/>
+
+    <Space
+        android:layout_width="wrap_content"
+        android:layout_height="48dp"/>
+
+    <LinearLayout
+        android:id="@+id/signinupPhoneInputView"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_gravity="center_horizontal"
+        android:orientation="horizontal"
+        >
+
+        <com.hbb20.CountryCodePicker
+            android:id="@+id/signinupPhoneCountry"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_gravity="center_vertical"
+            app:ccp_autoDetectCountry="false"
+            app:ccp_defaultNameCode="TZ"
+            app:ccp_textSize="16sp"
+            />
+
+        <com.rengwuxian.materialedittext.MaterialEditText
+            android:id="@+id/signinupPhoneInput"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_weight="1"
+            android:hint="Phone number"
+            android:inputType="phone"
+            android:maxLines="1"
+            android:minEms="10"
+            android:textSize="16sp"
+            android:digits="0123456789"
+            app:met_floatingLabel="highlight"
+            app:met_floatingLabelText="phone"
+            android:layout_gravity="bottom"
+            app:met_minCharacters="9"
+            app:met_maxCharacters="9"
+            />
+
+        <ProgressBar
+            android:id="@+id/signinupProgress"
+            style="?android:attr/progressBarStyleSmall"
+            android:layout_width="wrap_content"
+            android:layout_height="match_parent"
+            android:layout_gravity="center_vertical"
+            android:paddingLeft="8dp"
+            android:visibility="gone"/>
+
+    </LinearLayout>
+
+    <Space
+        android:layout_width="wrap_content"
+        android:layout_height="32dp"/>
+
+
+    <mehdi.sakout.fancybuttons.FancyButton
+        android:layout_gravity="center_horizontal"
+        android:id="@+id/signInButton"
+        android:layout_width="200dp"
+        android:layout_height="wrap_content"
+        android:clickable="true"
+        android:paddingBottom="6dp"
+        android:paddingTop="6dp"
+        fancy:fb_defaultColor="@color/blue"
+        fancy:fb_focusColor="@color/white"
+        fancy:fb_radius="4dp"
+        fancy:fb_text="SIGN IN"
+        fancy:fb_textColor="@color/white"
+        fancy:fb_textGravity="center"
+        fancy:fb_textSize="16sp"
+        fancy:fb_borderColor="@color/blue"
+        fancy:fb_borderWidth="2dp"
+        />
+
+    <Space
+        android:layout_width="wrap_content"
+        android:layout_height="12dp"/>
+
+    <mehdi.sakout.fancybuttons.FancyButton
+        android:id="@+id/signUpButton"
+        android:layout_width="200dp"
+        android:layout_height="wrap_content"
+        android:layout_gravity="center_horizontal"
+        android:clickable="true"
+        android:paddingBottom="6dp"
+        android:paddingTop="6dp"
+        fancy:fb_defaultColor="@color/transparent"
+        fancy:fb_focusColor="@color/blue"
+        fancy:fb_radius="4dp"
+        fancy:fb_text="SIGN UP"
+        fancy:fb_textColor="@color/blue"
+        fancy:fb_textGravity="center"
+        fancy:fb_textSize="16sp"
+        fancy:fb_borderColor="@color/blue"
+        fancy:fb_borderWidth="2dp"/>
+
+    <Space
+        android:layout_width="wrap_content"
+        android:layout_height="0dp"
+        android:layout_weight="1"/>
+
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_gravity="center"
+        android:gravity="center"
+        android:textSize="12sp"
+        android:fontFamily="sans-serif-light"
+        android:text="By signing in and/or registering, you acknowledge that you have understood and agreed to our Terms and Conditions."
+        />
+
+
+</LinearLayout>

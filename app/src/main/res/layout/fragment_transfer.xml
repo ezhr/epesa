@@ -1,0 +1,348 @@
+<android.support.constraint.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+                                             xmlns:app="http://schemas.android.com/apk/res-auto"
+                                             xmlns:tools="http://schemas.android.com/tools"
+                                             android:id="@+id/transferParentLayout"
+                                             android:layout_width="match_parent"
+                                             android:layout_height="match_parent"
+                                             android:background="@color/colorPrimary"
+                                             android:orientation="vertical"
+                                             android:focusable="true"
+                                             android:focusableInTouchMode="true"
+                                             tools:context="ezhr.epesa.TransferFragment"
+                                             tools:layout_editor_absoluteX="0dp"
+                                             tools:layout_editor_absoluteY="25dp">
+
+
+    <TextView
+        android:id="@+id/toTextView"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="16dp"
+        android:layout_marginTop="16dp"
+        android:fontFamily="sans-serif-light"
+        android:text="to:"
+        android:textColor="@color/white"
+        android:textSize="24sp"
+        app:layout_constraintLeft_toLeftOf="parent"
+        app:layout_constraintTop_toTopOf="parent"/>
+
+
+    <android.support.v7.widget.CardView
+        android:id="@+id/numberCardView"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:layout_marginEnd="16dp"
+        android:layout_marginStart="16dp"
+        android:layout_marginTop="16dp"
+        app:layout_constraintLeft_toLeftOf="parent"
+        app:layout_constraintRight_toRightOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/toTextView"
+        tools:layout_conversion_absoluteHeight="58dp"
+        tools:layout_conversion_absoluteWidth="336dp"
+        tools:layout_conversion_absoluteX="24dp"
+        tools:layout_conversion_absoluteY="68dp">
+
+        <LinearLayout
+            android:id="@+id/transferNumberView"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_margin="8dp"
+            android:orientation="horizontal">
+
+            <com.rengwuxian.materialedittext.MaterialEditText
+                android:id="@+id/transferNumberEditText"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_weight="1"
+                android:ellipsize="end"
+                android:fontFamily="sans-serif-light"
+                android:hint="Enter number or search contacts"
+                android:inputType="text"
+                android:maxLines="1"
+                android:minEms="12"
+                android:textSize="18sp"
+                app:met_baseColor="@color/blue"
+                app:met_floatingLabel="none"
+                app:met_hideUnderline="true"
+                app:met_primaryColor="@color/blue"
+                app:met_textColorHint="@color/light_gray"/>
+
+            <net.steamcrafted.materialiconlib.MaterialIconView
+                android:layout_width="wrap_content"
+                android:layout_height="match_parent"
+                android:layout_marginRight="4dp"
+                android:layout_marginLeft="4dp"
+                android:id="@+id/clearTextButton"
+                app:materialIcon="delete_circle"
+                app:materialIconColor="@color/default_gray"
+                android:visibility="gone"/>
+
+            <ProgressBar
+                android:layout_width="18dp"
+                android:layout_height="match_parent"
+                android:id="@+id/refreshContactsProgressView"
+                android:layout_marginRight="4dp"
+                android:layout_marginLeft="4dp"
+                android:visibility="gone"/>
+
+            <ImageView
+                android:id="@+id/transferStartQRButton"
+                android:layout_width="24dp"
+                android:layout_height="24dp"
+                android:layout_gravity="center"
+                android:layout_marginLeft="4dp"
+                android:layout_marginRight="4dp"
+                android:adjustViewBounds="false"
+                android:clickable="true"
+
+                android:cropToPadding="false"
+                android:scaleType="centerInside"
+                android:src="@drawable/qr_search_image"/>
+
+            <net.steamcrafted.materialiconlib.MaterialIconView
+                android:id="@+id/transferContactsEditTextOverflow"
+                android:layout_width="wrap_content"
+                android:layout_height="match_parent"
+                android:layout_gravity="center"
+                android:clickable="true"
+                app:materialIcon="dots_vertical"
+                app:materialIconColor="@color/dark_gray"
+                />
+
+        </LinearLayout>
+
+    </android.support.v7.widget.CardView>
+
+
+    <TextView
+        android:id="@+id/textView4"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="16dp"
+        android:layout_marginTop="16dp"
+        android:fontFamily="sans-serif-light"
+        android:text="message:"
+        android:textColor="@color/white"
+        android:textSize="24sp"
+        app:layout_constraintLeft_toLeftOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/numberCardView"
+        tools:layout_conversion_absoluteHeight="28dp"
+        tools:layout_conversion_absoluteWidth="336dp"
+        tools:layout_conversion_absoluteX="24dp"
+        tools:layout_conversion_absoluteY="143dp"/>
+
+
+    <android.support.v7.widget.CardView
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:layout_marginEnd="16dp"
+        android:layout_marginStart="16dp"
+        android:layout_marginTop="16dp"
+        android:gravity="top"
+        app:layout_constraintLeft_toLeftOf="parent"
+        app:layout_constraintRight_toRightOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/textView4"
+        tools:layout_conversion_absoluteHeight="73dp"
+        tools:layout_conversion_absoluteWidth="320dp"
+        tools:layout_conversion_absoluteX="32dp"
+        tools:layout_conversion_absoluteY="187dp"
+        android:id="@+id/cardView">
+
+        <com.rengwuxian.materialedittext.MaterialEditText
+            android:padding="8dp"
+            android:id="@+id/transferMessageEditText"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:gravity="top"
+            android:inputType="textMultiLine"
+            android:lines="2"
+            app:met_baseColor="@color/blue"
+            app:met_checkCharactersCountAtBeginning="true"
+            app:met_floatingLabel="none"
+            app:met_hideUnderline="true"
+            app:met_maxCharacters="160"
+            tools:layout_editor_absoluteX="0dp"
+            tools:layout_editor_absoluteY="0dp"/>
+
+    </android.support.v7.widget.CardView>
+
+    <android.support.v7.widget.CardView
+        android:id="@+id/transferContactsCard"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="2dp"
+        android:visibility="gone"
+        app:cardCornerRadius="0dp"
+        app:layout_constraintLeft_toLeftOf="@+id/numberCardView"
+        app:layout_constraintRight_toRightOf="@+id/numberCardView"
+        app:layout_constraintTop_toBottomOf="@+id/numberCardView"
+        tools:layout_conversion_absoluteHeight="0dp"
+        tools:layout_conversion_absoluteWidth="0dp"
+        tools:layout_conversion_absoluteX="24dp"
+        tools:layout_conversion_absoluteY="68dp">
+
+        <android.support.v7.widget.RecyclerView
+            android:id="@+id/transferContactsRecyclerView"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            tools:layout_editor_absoluteX="16dp"
+            tools:layout_editor_absoluteY="0dp"/>
+
+    </android.support.v7.widget.CardView>
+
+    <GridLayout
+        android:id="@+id/transferAmountLayout"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:layout_marginBottom="8dp"
+        android:layout_marginEnd="16dp"
+        android:layout_marginStart="16dp"
+        android:columnCount="2"
+        app:layout_constraintBottom_toTopOf="@+id/transferSendMoneyButton"
+        app:layout_constraintLeft_toLeftOf="parent"
+        app:layout_constraintRight_toRightOf="parent"
+        tools:layout_conversion_absoluteHeight="103dp"
+        tools:layout_conversion_absoluteWidth="336dp"
+        tools:layout_conversion_absoluteX="24dp"
+        tools:layout_conversion_absoluteY="413dp">
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_column="0"
+            android:layout_columnSpan="2"
+            android:layout_row="0"
+            android:orientation="horizontal">
+
+            <TextView
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_gravity="center_vertical"
+                android:layout_weight="1"
+                android:fontFamily="sans-serif-light"
+                android:text="Amount to send"
+                android:textColor="@color/white"
+                android:textSize="18sp"
+                />
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:fontFamily="sans-serif-light"
+                android:text="Tsh. "
+                android:textColor="@color/white"
+                android:textSize="14sp"/>
+
+            <com.rengwuxian.materialedittext.MaterialEditText
+                android:id="@+id/transferAmountEditText"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:digits="0123456789"
+                android:fontFamily="sans-serif-light"
+                android:gravity="right"
+                android:hint="0"
+                android:inputType="numberDecimal"
+                android:maxLines="1"
+                android:textColor="@color/white"
+                android:textSize="24sp"
+                app:met_baseColor="@color/white"
+                app:met_floatingLabel="none"
+                app:met_hideUnderline="true"
+                app:met_primaryColor="@color/white"
+                app:met_textColorHint="@color/white"
+                />
+
+
+        </LinearLayout>
+
+
+        <TextView
+            android:layout_column="0"
+            android:layout_row="1"
+            android:fontFamily="sans-serif-light"
+            android:text="Fees and Taxes"
+            android:textColor="@color/white"
+            />
+
+        <TextView
+            android:id="@+id/transferFeeTextView"
+            android:layout_column="1"
+            android:layout_gravity="right"
+            android:layout_row="1"
+            android:fontFamily="sans-serif-thin"
+            android:text="Free!"
+            android:textColor="@color/white"
+            />
+
+        <View
+            android:layout_height="1dp"
+            android:layout_column="0"
+            android:layout_columnSpan="2"
+            android:layout_marginBottom="4dp"
+            android:layout_marginTop="8dp"
+            android:layout_row="2"
+            android:background="@color/white"
+            />
+
+        <TextView
+            android:layout_column="0"
+            android:layout_gravity="center_vertical"
+            android:layout_row="3"
+            android:fontFamily="sans-serif-light"
+            android:text="Total Transfer Amount"
+            android:textColor="@color/white"
+            android:textSize="16sp"
+            />
+
+        <TextView
+
+            android:id="@+id/transferTotalTextView"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_gravity="right"
+            android:fontFamily="sans-serif-light"
+            android:gravity="right"
+            android:text="Tsh. 0.00"
+            android:textColor="@color/white"
+            android:textSize="20sp"
+            />
+
+    </GridLayout>
+
+
+    <mehdi.sakout.fancybuttons.FancyButton
+        android:id="@+id/transferSendMoneyButton"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:layout_marginBottom="0dp"
+        android:layout_marginLeft="0dp"
+        android:layout_marginRight="0dp"
+        android:clickable="true"
+        android:enabled="true"
+        android:hapticFeedbackEnabled="true"
+        android:padding="12dp"
+        app:fb_defaultColor="@color/green"
+        app:fb_focusColor="@color/white"
+        app:fb_text="TAP TO SEND"
+        app:fb_textSize="16sp"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintHorizontal_bias="0.0"
+        app:layout_constraintLeft_toLeftOf="parent"
+        app:layout_constraintRight_toRightOf="parent">
+
+    </mehdi.sakout.fancybuttons.FancyButton>
+
+    <ProgressBar
+        android:id="@+id/transferProgressView"
+        style="?android:attr/progressBarStyle"
+        android:layout_width="16dp"
+        android:layout_height="16dp"
+        android:layout_gravity="right"
+        android:layout_marginRight="16dp"
+        android:visibility="gone"
+        app:layout_constraintRight_toRightOf="parent"
+        app:layout_constraintBottom_toBottomOf="parent"
+        android:layout_marginBottom="8dp"
+        app:layout_constraintTop_toTopOf="@+id/transferSendMoneyButton"
+        android:layout_marginTop="8dp"/>
+
+</android.support.constraint.ConstraintLayout>
